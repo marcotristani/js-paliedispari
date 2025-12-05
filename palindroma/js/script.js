@@ -1,8 +1,20 @@
 //Chiedere a utente parola di tipo stringa
 
-//const wordUser = prompt("Inserire una parola:")
-const ceckWordUserNegative = "ciao";  //Forzo sistema per provarlo con parola non palindroma
-const ceckwordUserPositive = "Anna";  //Forzo sistema per provarlo con parola palindroma
+const wordUser = prompt("Inserire una parola:")
+//const ceckWordUserNegative = "ciao";  //Forzo sistema per provarlo con parola non palindroma
+//const ceckwordUserPositive = "Anna";  //Forzo sistema per provarlo con parola palindroma
+
+// Se risultato funzione torna con un return salvare questo valore in una variabile e stamparlo
+   //const ceckWordUserPalindromePositive = ceckPalindrome(ceckwordUserPositive);
+   //const ceckWordUserPalindromeNegative = ceckPalindrome(ceckWordUserNegative);
+   const ceckWordUserPalindrome = ceckPalindrome(wordUser);
+
+   //document.getElementById("PalindromeNegative").innerHTML = `La parola "${ceckWordUserNegative}" è palindroma?: ${ceckWordUserPalindromeNegative}`
+   //document.getElementById("PalindromePositive").innerHTML = `La parola "${ceckwordUserPositive}" è palindroma?: ${ceckWordUserPalindromePositive}`
+   document.getElementById("Palindrome").innerHTML = `La parola "${wordUser}" è palindroma?: ${ceckWordUserPalindrome}`
+
+
+//FUNZIONI
 
 //Creare funzione per verificare se la parola che gli forniamo è palindroma
 function ceckPalindrome(word) {// Prendere la parola fornita 
@@ -29,11 +41,3 @@ function ceckPalindrome(word) {// Prendere la parola fornita
     return ceck;                                                //(o con un return)
 }
 
-// Se risultato funzione torna con un return salvare questo valore in una variabile e stamparlo
-   const ceckWordUserPalindromePositive = ceckPalindrome(ceckwordUserPositive);
-   const ceckWordUserPalindromeNegative = ceckPalindrome(ceckWordUserNegative);
-   //const ceckWordUserPalindrome = ceckPalindrome(wordUser);
-
-   document.getElementById("PalindromeNegative").innerHTML = `La parola "${ceckWordUserNegative}" è palindroma?: ${ceckWordUserPalindromeNegative}`
-   document.getElementById("PalindromePositive").innerHTML = `La parola "${ceckwordUserPositive}" è palindroma?: ${ceckWordUserPalindromePositive}`
-   //document.getElementById("Palindrome").innerHTML = `La parola "${wordUser}" è palindroma?: ${ceckWordUserPalindrome}`
