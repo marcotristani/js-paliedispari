@@ -28,8 +28,12 @@ function ceckPalindrome(word) {// Prendere la parola fornita
     console.log(`La parola "${word}" è palindroma?: ${ceck}`)   //( o direttamente con un output proprio alla funzione )
     return ceck;                                                //(o con un return)
 }
-   
-   ceckPalindrome(ceckwordUserPositive);
-   ceckPalindrome(ceckWordUserNegative);
 
 // Se risultato funzione torna con un return salvare questo valore in una variabile e stamparlo
+   const ceckWordUserPalindromePositive = ceckPalindrome(ceckwordUserPositive);
+   const ceckWordUserPalindromeNegative = ceckPalindrome(ceckWordUserNegative);
+   //const ceckWordUserPalindrome = ceckPalindrome(wordUser);
+
+   document.getElementById("PalindromeNegative").innerHTML = `La parola "${ceckWordUserNegative}" è palindroma?: ${ceckWordUserPalindromeNegative}`
+   document.getElementById("PalindromePositive").innerHTML = `La parola "${ceckwordUserPositive}" è palindroma?: ${ceckWordUserPalindromePositive}`
+   //document.getElementById("Palindrome").innerHTML = `La parola "${wordUser}" è palindroma?: ${ceckWordUserPalindrome}`
