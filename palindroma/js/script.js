@@ -16,14 +16,20 @@ function ceckPalindrome(word) {// Prendere la parola fornita
     for ( i = wordOriginal.length - 1; i >= 0; i--){
         wordReverse += wordOriginal[i];
     }
-    console.log(wordOriginal, wordReverse);
-    
+    //Verificare se queste due variabili sono uguali
+    let ceck;
+    if ( wordOriginal === wordReverse) {// Se sono uguali allora la parola è palindroma 
+        ceck = true;
+    }else {
+        ceck = false;                   // altrimenti non è palindroma
+    }
 
+    // Far ritornare fuori dala funzione il risultatooppure 
+    console.log(`La parola "${word}" è palindroma?: ${ceck}`)   //( o direttamente con un output proprio alla funzione )
+    return ceck;                                                //(o con un return)
 }
    
    ceckPalindrome(ceckwordUserPositive);
- 
-   //Verificare se queste due variabili sono uguali
-   // Se sono uguali allora la parola è palindroma altrimenti non è palindroma
-   // Far ritornare fuori dala funzione il risultato( o direttamente con un output proprio alla funzione oppure con un return)
+   ceckPalindrome(ceckWordUserNegative);
+
 // Se risultato funzione torna con un return salvare questo valore in una variabile e stamparlo
