@@ -10,9 +10,8 @@ function isEven(number) {
   }
 }
 
-function isNumberInt(number) {
-  const numberInt = parseInt(number);
-  if (isNaN(numberInt)) {
+function isNumber(number) {
+  if (isNaN(number)) {
     alert("Inserire un vore di tipo numerico");
     return false;
   } else {
@@ -21,7 +20,7 @@ function isNumberInt(number) {
 }
 
 function isIncludedRange(number, min, max) {
-  if ( number <= min || number >= max ) {
+  if (number < min || number > max) {
     alert(`Inserire un numero tra ${min} e ${max}`);
     return false;
   } else {
